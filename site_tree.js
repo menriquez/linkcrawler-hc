@@ -1,22 +1,10 @@
 /**
- * Discovers all the pages in site or single page app (SPA) and creates
- * a tree of the result in ./output/<site slug/crawl.json. Optionally
- * takes screenshots of each page as it is visited.
  *
- * Usage:
- *   node crawlsite.js
- *   URL=https://yourspa.com node crawlsite.js
- *   URL=https://yourspa.com node crawlsite.js --screenshots
+ *   my first attempt at building a click-based URL crawler...included because some of the routines could be valuable
  *
- * Then open the visualizer in a browser:
- *   http://localhost:8080/html/d3tree.html
- *   http://localhost:8080/html/d3tree.html?url=../output/https___yourspa.com/crawl.json
- *
- *Start Server:
- *   node server.js
+ *   - markus enriquez  12-17-19
  *
  */
-
 const fs = require('fs');
 const del = require('del');
 const util = require('util');
@@ -117,10 +105,14 @@ function collectAllSameOriginAnchorsDeep(sameOrigin = true) {
 }
 
 /**
- * Crawls a URL by visiting an url, then recursively visiting any child subpages.
- * @param {!Browser} browser
- * @param {{url: string, title: string, img?: string, children: !Array<!Object>}} page Current page.
- * @param {number=} depth Current subtree depth of crawl.
+ *
+ * the recursive routine that attempts to crawl a  website not by parsing <a> links but by actually
+ * CLICKING on the link on the page, and by storing the URI of the redirected page actually loaded by the
+ * web browser.
+ *
+ * the overriding point of this is to build a website link crawler that can find every URL of a website no matter
+ * if the site uses JS-based navigation or HTML-based...
+ *
  */
 async function crawl(browser, page, depth = 0) {
 
