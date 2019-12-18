@@ -1,6 +1,6 @@
 # litiscrape-puppet
 
-The following, contained in site-tree.js, is the source code for my efforts in using Google's Puppeteer as all-case website link crawler (ie can handle JS-based link traversal such as window.open() and location.href() and all the many other ways JS can be used to open new pages on a website)...
+The following, contained in `site-tree.js` and `site-preprocess.js`, is the nodejs source code for my efforts in using Google's Puppeteer as all-case website link crawler (ie can handle JS-based link traversal such as window.open() and location.href() and all the many other ways JS can be used to open new pages on a website)...
 
 After many hours of work in development and scanning the web for code that could help me do this, I came to the conclusion that Puppeteer just wasn't built for doing something like this.
 
