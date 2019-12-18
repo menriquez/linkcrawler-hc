@@ -12,4 +12,6 @@ In order to test my system, you have to first install nodejs and npm, then insta
 
 Since this is a private repos, there is no need to put the full install instructions here...just hit me up if you have any questions.
 
+The actual WORKING code that I was developing is contained in `site-preprocess.js`, so install all the `require()` modules to run.
+
 - markus enriquez  12/17/19
