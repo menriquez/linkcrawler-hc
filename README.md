@@ -1,4 +1,4 @@
-# litiscrape-puppet
+# linkcrawler-puppeteer
 
 The following, contained in `site-tree.js` and `site-preprocess.js`, is the nodejs source code for my efforts in using Google's Puppeteer as all-case website link crawler (ie can handle JS-based link traversal such as window.open() and location.href() and all the many other ways JS can be used to open new pages on a website)...
 
@@ -10,7 +10,7 @@ I did manage to get my system to actually "click" links and load the pages, so b
 
 In order to test my system, you have to first install nodejs and npm, then install Puppeteer and the other modules indicated in my require() statements, then pull the code into your directory.
 
-Since this is a private repos, there is no need to put the full install instructions here...just hit me up if you have any questions.
+I have just recently made this code public and have yet to include a full install guide...just hit me up if you have any questions.
 
 The actual WORKING code that I was developing is contained in `site-preprocess.js`, so install all the `require()` modules to run.
 
